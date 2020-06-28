@@ -12,18 +12,23 @@ namespace Algorithms.Common
         /// <typeparam name="T">The Type of value.</typeparam>
         public static bool IsNumber<T>(this T value)
         {
-            if (value is sbyte) return true;
-            if (value is byte) return true;
-            if (value is short) return true;
-            if (value is ushort) return true;
-            if (value is int) return true;
-            if (value is uint) return true;
-            if (value is long) return true;
-            if (value is ulong) return true;
-            if (value is float) return true;
-            if (value is double) return true;
-            if (value is decimal) return true;
-            return false;
+            switch (value)
+            {
+                case sbyte _:
+                case byte _:
+                case short _:
+                case ushort _:
+                case int _:
+                case uint _:
+                case long _:
+                case ulong _:
+                case float _:
+                case double _:
+                case decimal _:
+                    return true;
+                default:
+                    return false;
+            }
         }
 
 
